@@ -15,7 +15,7 @@ As of october 2020, manually installing is the prefered way, new versions coming
 - Insert your 8 gig SD card into your computer and burn the Raspberry Pi OS image onto it
    - What means *burn the image*? Get rid of those matches, and have a look [here](https://www.raspberrypi.org/documentation/installation/installing-images/)
 - When your SD is flashed, unplug it and replug it, your computer should detect, among others, a new partition called `boot`
-- With your favorite text editor, create a new file on that partition. It is important, on Windows, that you do not right click and create a new text file! Open your text editor (hmmm [*notepad++*](https://notepad-plus-plus.org/) and do save it. Name the file `ssh`, **without any extension**. For Windows users, select `all types` instead of the default selected `Normal text file (.txt)`
+- With your favorite text editor, create a new file on that partition. It is important, on Windows, that you do not right click and create a new text file! Open your text editor (hmmm [*notepad++*](https://notepad-plus-plus.org/) and do save it despite the fact that it is empty. Name the file `ssh`, **without any extension**. For Windows users, select `all types` instead of the default selected `Normal text file (.txt)`
 - Once saved, keep your ssh file open, and paste the following content into it
   ```
   country=CH
@@ -42,7 +42,7 @@ As of october 2020, manually installing is the prefered way, new versions coming
   - `sudo apt-get update`
   - `sudo apt-get dist-upgrade -y`
 - Open the configuration tool
-  - `sudo raspiconfig`
+  - `sudo raspi-config`
 - Set the network name to `ProjectAlice`
 - Set your locales
 - **Change the default user password**
@@ -68,7 +68,7 @@ git pull
 ## Start Alice
 - Copy the basic configuration on their place for first boot: `sudo cp  ~/ProjectAlice/ProjectAlice.yaml /boot/ProjectAlice.yaml`
 - We need to configure a few things for her to start nicely: `sudo nano /boot/ProjectAlice.yaml`
-- Set that file parameters to your licking and setup.
+- Set that file parameters to your liking and setup.
 - You know what? We're done! Let's start her up!
 ```
 cd ~/ProjectAlice
